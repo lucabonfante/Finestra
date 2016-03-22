@@ -5,10 +5,14 @@ import java.util.ArrayList;
 public class Cliente {
 
     private String nome;
-    private ArrayList<Ordine> listaOrdini= new ArrayList<>();
+    private String cognome;
+    private String indirizzo;
+    private ArrayList<Ordine> listaOrdini = new ArrayList<>();
 
-    public Cliente(String nome) {
+    public Cliente(String nome, String cognome, String indirizzo) {
         this.nome = nome;
+        this.cognome = cognome;
+        this.indirizzo = indirizzo;
     }
 
     public String getNome() {
@@ -27,14 +31,29 @@ public class Cliente {
         this.listaOrdini = listaOrdini;
     }
 
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public String getIndirizzo() {
+        return indirizzo;
+    }
+
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
+    }
+
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + '}';
+        return "Cliente{" + "nome=" + nome + ", cognome=" + cognome + ", indirizzo=" + indirizzo + '}';
     }
-    
-    public void addOrdine(Ordine ordine){
+
+    public void addOrdine(Ordine ordine) {
         this.listaOrdini.add(ordine);
     }
-    
 
 }

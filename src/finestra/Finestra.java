@@ -87,7 +87,7 @@ public class Finestra {
         listaFinestre.add(finestra1);
         
         //cliente
-        Cliente mario = new Cliente("Mario");
+        Cliente mario = new Cliente("Mario", "Rossi", "via Verdi 5");
         
         //ordine
         Ordine ordine = new Ordine(mario, listaFinestre, 001);
