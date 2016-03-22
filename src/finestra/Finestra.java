@@ -39,6 +39,11 @@ public class Finestra {
         this.larghezza = larghezza;
         this.md = md;
     }
+
+    @Override
+    public String toString() {
+        return "Finestra{" + "lunghezza=" + lunghezza + ", larghezza=" + larghezza + ", md=" + md + '}';
+    }
     
     public double calcolaSommaFinestra(ElencoMateriale em){
         HashMap<String, Materiale> mappa = new HashMap<>();
@@ -66,8 +71,8 @@ public class Finestra {
         elenco.addMateriale(cameraDoppia);
         
         //modello
-        Modello primavera = new Modello("Primavera", "camera-doppia", "legno", "assemblaggio");
-        Modello estate = new Modello("Estate", "camera-semplice", "alluminio", "assemblaggio");
+        Modello primavera = new Modello("Primavera", "camera-doppia", "legno", "fisso");
+        Modello estate = new Modello("Estate", "camera-semplice", "alluminio", "ribalta");
         
         //finestra 1
         Finestra finestra1 = new Finestra(1.5, 2.3, primavera);
@@ -82,13 +87,12 @@ public class Finestra {
         listaFinestre.add(finestra1);
         
         //cliente
-        Cliente cliente1 = new Cliente("cliente1");
+        Cliente mario = new Cliente("Mario");
         
         //ordine
-        Ordine ordine = new Ordine(cliente1, listaFinestre, 001);
-        cliente1.addOrdine(ordine);
+        Ordine ordine = new Ordine(mario, listaFinestre, 001);
+        mario.addOrdine(ordine);
         
-        System.out.println(cliente1);
         System.out.println(ordine);
 
     }

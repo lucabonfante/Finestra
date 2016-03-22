@@ -40,6 +40,6 @@ public class Ordine {
 
     @Override
     public String toString() {
-        return "Ordine{" + "cliente=" + cliente + ", listaFinestre=" + listaFinestre + ", numeroOrdine=" + numeroOrdine + '}';
+        return "Ordine{" + cliente + ", listaFinestre=" + listaFinestre + ", numeroOrdine=" + numeroOrdine + '}';
     }
 }
