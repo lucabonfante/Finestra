@@ -75,8 +75,8 @@ public class Finestra {
         Modello estate = new Modello("Estate", "camera-semplice", "alluminio", "ribalta");
         
         //finestra 1
-        Finestra finestra1 = new Finestra(1.5, 2.3, primavera);
-        System.out.println("Il costo della finestra e': "+finestra1.calcolaSommaFinestra(elenco));
+        Finestra finestra1 = new Finestra(1.1, 2.5, primavera);
+        System.out.println("Il costo della finestra1 e': " + finestra1.calcolaSommaFinestra(elenco) + " €");
         
         //finestra 2
         Finestra finestra2 = new Finestra(2.0, 2.0, estate);
